@@ -1,0 +1,39 @@
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+
+class Pelicula{
+	private: //Atributos
+		string nombre;
+		int anho;
+		float duracion;
+	public: //Metodos
+		Pelicula(string, int, float); //Constructor
+		void iniciar();
+		void pausar();
+};
+
+//Constructor (Inicializa atributos)
+Pelicula::Pelicula(string _nombre, int _anho, float _duracion){
+	nombre = _nombre;
+	anho = _anho;
+	duracion = _duracion;
+}
+
+
+
+void Pelicula::iniciar(){
+	cout<<"La pelicula "<<nombre<<", con una duracion de "<<duracion<<" minutos,  se ha empezado a reproducir"<<endl;
+}
+
+void Pelicula::pausar(){
+	cout<<"La pelicula "<<nombre<<" se ha pausado"<<endl;
+}
+
+int main(){
+	Pelicula p1 = Pelicula("The Dark Knight", 2008, 152);
+	p1.iniciar();
+	
+	system("pause");
+	return 0;
+}
