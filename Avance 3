@@ -1,0 +1,115 @@
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+
+//Superclase
+class Multimedia{
+	private: //Atributos
+		string nombre;
+		int anho;
+	public: //Metodos
+		Multimedia(); //Constructor
+		void setMultimedia(string, int);
+		string getMultimediaN();
+		int getMultimediaA();
+		void mostrarDatosM();
+		void iniciar();
+		void pausar();
+		
+};
+
+//Subclases
+class Pelicula : public Multimedia{
+	private:
+		int duracion;
+	public:
+		Pelicula();
+		void setPelicula(int);
+		int getPeliculasD();
+		void mostrarDatosP();
+};
+
+class Serie : public Multimedia{
+	private:
+		int capitulos;
+	public:
+		Serie();
+		void setSerie(int);
+		int getSerieC();
+		void mostrarDatosS();
+};
+
+//Constructores (Inicializa atributos)
+Multimedia::Multimedia(){
+}
+
+Pelicula::Pelicula(){
+}
+
+Serie::Serie(){
+}
+
+//Setters
+void Multimedia::setMultimedia(string _nombre, int _anho){
+	nombre = _nombre;
+	anho = _anho;
+}
+
+void Pelicula::setPelicula(int _duracion){
+	duracion = _duracion;
+}
+
+void Serie::setSerie(int _capitulos){
+	capitulos = _capitulos;
+}
+
+//Getters
+string Multimedia::getMultimediaN(){
+	return nombre;
+}
+
+int Multimedia::getMultimediaA(){
+	return anho;
+}
+
+int Pelicula::getPeliculasD(){
+	return duracion;
+}
+
+int Serie::getSerieC(){
+	return capitulos;
+}
+
+//Metodos
+void Multimedia::iniciar(){
+	cout<<nombre<<" se ha empezado a reproducir."<<endl;
+}
+
+void Multimedia::pausar(){
+	cout<<nombre<<" se ha pausado."<<endl;
+}
+
+void Multimedia::mostrarDatosM(){
+	cout<<nombre<<" salio en "<<anho<<endl;
+}
+
+void Pelicula::mostrarDatosP(){
+	mostrarDatosM();
+	cout<<"y tiene una duracion de "<<duracion<<" minutos."<<endl;
+}
+
+void Serie::mostrarDatosS(){
+	mostrarDatosM();
+	cout<<"y tiene "<<capitulos<<" capitulos."<<endl;
+}
+
+int main(){
+	Multimedia p1;
+	Pelicula p1;
+	p1.setMultimedia("The Dark Knight", 2008);
+	p1.setPeliculaD(168);
+	p1.mostrarDatosP();
+	
+	system("pause");
+	return 0;
+}
