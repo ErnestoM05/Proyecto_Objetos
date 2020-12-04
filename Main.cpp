@@ -2,6 +2,7 @@
 //Autor: Ernesto Méndez Velasco
 //A01708166
 //03/12/2020
+//Archivo: Main.cpp
 
 //Bibliotecas
 #include<iostream>
