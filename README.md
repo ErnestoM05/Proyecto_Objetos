@@ -12,6 +12,6 @@ Dentro del programa sustitui getters por polimorfismo al momento de recuperar at
 
       
 ## Correcciones
-- Añadí documentanción
-- Correjí setters
+- Añadí documentación
+- Corregí setters
 - Coloqué las clases en un archivo distinto al main
